@@ -108,39 +108,18 @@ var chart = new CanvasJS.Chart("chartContainer", {
             { x: new Date(2020, 3, 8), y: 5 }
 
         ]
-    },
-    // {
-    //     type: "splineArea", 
-    //     showInLegend: true,
-    //     yValueFormatString: "$#,##0",      
-    //     name: "Maintenance",
-    //     dataPoints: [
-    //         { x: new Date(2016, 2), y: 1700 },
-
-    //         { x: new Date(2016, 4), y: 1000 },
-
-    //         { x: new Date(2016, 6), y: 900 },
-
-    //         { x: new Date(2016, 8), y: 1200 },
-
-    //         { x: new Date(2016, 10), y: 1300 },
-
-    //         { x: new Date(2017, 0), y: 2800 }
-
-    //     ]
-    // }
-    ]
+    }]
 });
 chart.render();
 
 }
 </script>
 
-<!-- 
+
 <script>
 window.onload = function () {
     
-var chart = new CanvasJS.Chart("chartContainer", {
+var chart = new CanvasJS.Chart("chartContainer2", {
     animationEnabled: true,
     
     title:{
@@ -176,7 +155,7 @@ chart.render();
 
 }
 </script>
- -->
+
 
 </head>
 
@@ -297,12 +276,14 @@ Most people infected with the COVID-19 virus will experience mild to moderate re
 
 
             <!-- CHARTS IN JAVA SCRIPT -->
-
-        <div id="chartContainer" style="height: 400px; width: 85%;"></div>
-<script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-<!-- 
-        <div id="chartContainer" style="height: 300px; width: 100%;"></div>
-<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script> -->
+        
+            <div id="chartContainer" style="height: 400px; width: 85%;"></div>
+            <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+        
+        
+            <div id="chartContainer2" style="height: 400px; width: 90%;"></div>
+            <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+        
 <!-- 
         <div class="row about-process block-1-2 block-tab-full">
 
