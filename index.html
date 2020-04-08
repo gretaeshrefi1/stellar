@@ -31,6 +31,153 @@
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
+
+    <script>
+window.onload = function () {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+    animationEnabled: true,
+    title:{
+        text: "Number of infected people since 13.03.2020 in Kosovo"
+    },
+    axisY :{
+        includeZero: false,
+        // prefix: "$"
+    },
+    toolTip: {
+        shared: true
+    },
+    legend: {
+        fontSize: 14
+    },
+    data: [{
+        type: "splineArea",
+        showInLegend: true,
+        name: "Infected",
+        yValueFormatString: "#,##0",
+        xValueFormatString: "D MMM YYYY",
+        dataPoints: [
+            { x: new Date(2020, 2, 12 ), y: 0 },
+            { x: new Date(2020, 2, 13 ), y: 2 },
+            { x: new Date(2020, 2, 18 ), y: 20 },
+
+            { x: new Date(2020, 2, 24 ), y: 63 },
+
+            { x: new Date(2020, 2, 30), y: 102},
+
+            { x: new Date(2020, 3, 8),  y: 184 }
+
+        ]
+    },
+    {
+        type: "splineArea", 
+        showInLegend: true,
+        name: "Healed",
+        yValueFormatString: "#,##0",
+        dataPoints: [
+            { x: new Date(2020, 2, 12), y: 0 },
+
+            { x: new Date(2020, 2, 13), y: 0 },
+
+            { x: new Date(2020, 2, 18), y: 0 },
+
+            { x: new Date(2020, 2, 24), y: 2 },
+
+            { x: new Date(2020, 2, 30), y: 15 },
+
+            { x: new Date(2020, 3, 8), y: 30}
+
+        ]
+    },
+    {
+        type: "splineArea", 
+        showInLegend: true,
+        name: "Victims",
+        yValueFormatString: "#,##0",     
+        dataPoints: [
+            { x: new Date(2020, 2, 12), y: 0 },
+
+            { x: new Date(2020, 2, 13), y: 0 },
+
+            { x: new Date(2020, 2, 18), y: 0 },
+
+            { x: new Date(2020, 2, 24), y: 1 },
+
+            { x: new Date(2020, 2, 30), y: 3 },
+
+            { x: new Date(2020, 3, 8), y: 5 }
+
+        ]
+    },
+    // {
+    //     type: "splineArea", 
+    //     showInLegend: true,
+    //     yValueFormatString: "$#,##0",      
+    //     name: "Maintenance",
+    //     dataPoints: [
+    //         { x: new Date(2016, 2), y: 1700 },
+
+    //         { x: new Date(2016, 4), y: 1000 },
+
+    //         { x: new Date(2016, 6), y: 900 },
+
+    //         { x: new Date(2016, 8), y: 1200 },
+
+    //         { x: new Date(2016, 10), y: 1300 },
+
+    //         { x: new Date(2017, 0), y: 2800 }
+
+    //     ]
+    // }
+    ]
+});
+chart.render();
+
+}
+</script>
+
+<!-- 
+<script>
+window.onload = function () {
+    
+var chart = new CanvasJS.Chart("chartContainer", {
+    animationEnabled: true,
+    
+    title:{
+        text:"Wordwide realtime data about Covid-19"
+    },
+    axisX:{
+        interval: 1
+    },
+    axisY2:{
+        interlacedColor: "rgba(1,77,101,.2)",
+        gridColor: "rgba(1,77,101,.1)",
+        title: "Number of Infected People"
+    },
+    data: [{
+        type: "bar",
+        name: "companies",
+        axisYType: "secondary",
+        color: "#014D65",
+        dataPoints: [
+            { y: 146690, label: "Spain" },
+            { y: 135586, label: "Italy" },
+            { y: 6015, label: "Australia" },
+            { y: 10384, label: "South Korea" },
+            { y: 22488, label: "Switzerland" },
+            { y: 107659, label: "Germany" },
+            { y: 78167, label: "France" },
+            { y: 81802, label: "China" },
+            { y: 400788, label: "US" }
+        ]
+    }]
+});
+chart.render();
+
+}
+</script>
+ -->
+
 </head>
 
 
@@ -148,6 +295,15 @@ Most people infected with the COVID-19 virus will experience mild to moderate re
             </div>
         </div>
 
+
+            <!-- CHARTS IN JAVA SCRIPT -->
+
+        <div id="chartContainer" style="height: 400px; width: 85%;"></div>
+<script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<!-- 
+        <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script> -->
+<!-- 
         <div class="row about-process block-1-2 block-tab-full">
 
             <div class="col-block item-process" data-aos="fade-up">
@@ -364,7 +520,7 @@ Most people infected with the COVID-19 virus will experience mild to moderate re
 
             </div> <!-- end item-folio -->
 
-            <div class="col-block item-folio" data-aos="fade-up">
+           <!--  <div class="col-block item-folio" data-aos="fade-up">
 
                 <div class="item-folio__thumb">
                     <a href="images/portfolio/gallery/monte.jpg" class="thumb-link" title="Montenegro" data-size="1050x700">
@@ -390,9 +546,9 @@ Most people infected with the COVID-19 virus will experience mild to moderate re
                     <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
                 </div>
 
-            </div> <!-- end item-folio -->
+            </div> --> <!-- end item-folio -->
 
-            <div class="col-block item-folio" data-aos="fade-up">
+            <!-- <div class="col-block item-folio" data-aos="fade-up">
 
                 <div class="item-folio__thumb">
                     <a href="images/portfolio/gallery/italy.jpg" class="thumb-link" title="Italy" data-size="1050x700">
@@ -418,9 +574,9 @@ Most people infected with the COVID-19 virus will experience mild to moderate re
                     <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
                 </div>
 
-            </div> <!-- end item-folio -->
+            </div> --> <!-- end item-folio -->
 
-            <div class="col-block item-folio" data-aos="fade-up">
+            <!-- <div class="col-block item-folio" data-aos="fade-up">
 
                 <div class="item-folio__thumb">
                     <a href="images/portfolio/gallery/china.jpg" class="thumb-link" title="china" data-size="1050x700">
@@ -446,9 +602,9 @@ Most people infected with the COVID-19 virus will experience mild to moderate re
                     <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
                 </div>
 
-            </div> <!-- end item-folio -->
+            </div> --> <!-- end item-folio -->
 
-            <div class="col-block item-folio" data-aos="fade-up">
+           <!--  <div class="col-block item-folio" data-aos="fade-up">
 
                 <div class="item-folio__thumb">
                     <a href="images/portfolio/gallery/namerica.jpg" class="thumb-link" title="North America" data-size="1050x700">
@@ -474,9 +630,9 @@ Most people infected with the COVID-19 virus will experience mild to moderate re
                     <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
                 </div>
 
-            </div> <!-- end item-folio -->
+            </div> --> <!-- end item-folio -->
 
-            <div class="col-block item-folio" data-aos="fade-up">
+           <!--  <div class="col-block item-folio" data-aos="fade-up">
 
                 <div class="item-folio__thumb">
                     <a href="images/portfolio/gallery/same.jpg" class="thumb-link" title="South America" data-size="1050x700">
@@ -502,7 +658,7 @@ Most people infected with the COVID-19 virus will experience mild to moderate re
                     <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
                 </div>
 
-            </div> <!-- end item-folio -->
+            </div> --> <!-- end item-folio -->
 
         </div> <!-- end portfolio -->
 
