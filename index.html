@@ -65,7 +65,8 @@ var chart = new CanvasJS.Chart("chartContainer", {
             { x: new Date(2020, 2, 18 ), y: 20 },
             { x: new Date(2020, 2, 24 ), y: 63 },
             { x: new Date(2020, 2, 30), y: 102 },
-            { x: new Date(2020, 3, 8),  y: 184 }
+            { x: new Date(2020, 3, 8),  y: 184 },
+            { x: new Date(2020, 3, 9),  y: 224 }
         ]
     },
     {
@@ -79,7 +80,8 @@ var chart = new CanvasJS.Chart("chartContainer", {
             { x: new Date(2020, 2, 18), y: 0 },
             { x: new Date(2020, 2, 24), y: 2 },
             { x: new Date(2020, 2, 30), y: 15 },
-            { x: new Date(2020, 3, 8), y: 30 }
+            { x: new Date(2020, 3, 8), y: 30 },
+            { x: new Date(2020, 3, 9), y: 30 }
         ]
     },
     {
@@ -93,7 +95,8 @@ var chart = new CanvasJS.Chart("chartContainer", {
             { x: new Date(2020, 2, 18), y: 0 },
             { x: new Date(2020, 2, 24), y: 1 },
             { x: new Date(2020, 2, 30), y: 3 },
-            { x: new Date(2020, 3, 8), y: 5 }
+            { x: new Date(2020, 3, 8), y: 5 },
+            { x: new Date(2020, 3, 9), y: 6 }
         ]
     }]
 });
@@ -119,7 +122,7 @@ var chart2 = new CanvasJS.Chart("chartContainer2", {
     },
     data: [{
         type: "bar",
-        name: "companies",
+        name: "companies",  
         axisYType: "secondary",
         color: "#014D65",
         dataPoints: [
@@ -136,6 +139,51 @@ var chart2 = new CanvasJS.Chart("chartContainer2", {
     }]
 });
 chart2.render();
+
+
+var chart3 = new CanvasJS.Chart("chartContainer3", {
+    exportEnabled: true,
+    animationEnabled: true,
+    title:{
+        text: "Gender segregation of the infected"
+    },
+    legend:{
+        cursor: "pointer",
+        itemclick: explodePie
+    },
+    data: [{
+        type: "pie",
+        showInLegend: true,
+        toolTipContent: "{name}: <strong>{y}</strong>",
+        indexLabel: "{name}",
+        dataPoints: [
+            { y: 46, name: "Male" },
+            { y: 41, name: "Female" },
+            { y: 83, name: "Unidentified"}
+        ]
+    }]
+});
+chart3.render();
+}
+
+function explodePie (e) {
+    if(typeof (e.dataSeries.dataPoints[e.dataPointIndex].exploded) === "undefined" || !e.dataSeries.dataPoints[e.dataPointIndex].exploded) {
+        e.dataSeries.dataPoints[e.dataPointIndex].exploded = true;
+    } else {
+        e.dataSeries.dataPoints[e.dataPointIndex].exploded = false;
+    }
+    e.chart.render();
+
+}
+
+
+function explodePie (e) {
+    if(typeof (e.dataSeries.dataPoints[e.dataPointIndex].exploded) === "undefined" || !e.dataSeries.dataPoints[e.dataPointIndex].exploded) {
+        e.dataSeries.dataPoints[e.dataPointIndex].exploded = true;
+    } else {
+        e.dataSeries.dataPoints[e.dataPointIndex].exploded = false;
+    }
+    e.chart.render();
 
 }
 </script>
@@ -263,6 +311,8 @@ Most people infected with the COVID-19 virus will experience mild to moderate re
             <div id="chartContainer" style="height: 400px; width: 85%;"></div>
             <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
         
+            <div id="chartContainer3" style="height: 300px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 
 
         
@@ -326,56 +376,50 @@ Most people infected with the COVID-19 virus will experience mild to moderate re
         <div class="row services-list block-1-3 block-m-1-2 block-tab-full">
 
             <div class="col-block item-service" data-aos="fade-up">
-                <h4>Wash Hands</h4>
+                <h4>WASH HANDS</h4>
                 <p>
                 Sit ut cum molestiae. Dolore ducimus qui quasi. Fugiat consequatur sit vel illum vel et 
-                a delectus. Vel sequi vitae voluptatem perspiciatis eligendi. Voluptatibus optio natus 
-                asperiores est commodi amet quia architecto. Dolores necessitatibus et.
+                a delectus.
                 </p>
             </div>
 
             <div class="col-block item-service" data-aos="fade-up">
-                <h4>Stay Home</h4>
+                <h4>STAY HOME</h4>
                 <p>
                 Sit ut cum molestiae. Dolore ducimus qui quasi. Fugiat consequatur sit vel illum vel et 
-                a delectus. Vel sequi vitae voluptatem perspiciatis eligendi. Voluptatibus optio natus 
-                asperiores est commodi amet quia architecto. Dolores necessitatibus et.
+                a delectus.
                 </p>
             </div>
 
             <div class="col-block item-service" data-aos="fade-up">
-                <h4>Keep Distance</h4>
+                <h4>KEEP DISTANCE</h4>
                 <p>
                 Sit ut cum molestiae. Dolore ducimus qui quasi. Fugiat consequatur sit vel illum vel et 
-                a delectus. Vel sequi vitae voluptatem perspiciatis eligendi. Voluptatibus optio natus 
-                asperiores est commodi amet quia architecto. Dolores necessitatibus et.
+                a delectus.
                 </p>
             </div>
 
             <div class="col-block item-service" data-aos="fade-up">
-                <h4>Use Vitamin C</h4>
+                <h4>USE VITAMIN C</h4>
                 <p>
                 Sit ut cum molestiae. Dolore ducimus qui quasi. Fugiat consequatur sit vel illum vel et 
-                a delectus. Vel sequi vitae voluptatem perspiciatis eligendi. Voluptatibus optio natus 
-                asperiores est commodi amet quia architecto. Dolores necessitatibus et.
+                a delectus. 
                 </p>
             </div>
 
             <div class="col-block item-service" data-aos="fade-up">
-                <h4>Use Masks</h4>
+                <h4>USE MASKS</h4>
                 <p>
                 Sit ut cum molestiae. Dolore ducimus qui quasi. Fugiat consequatur sit vel illum vel et 
-                a delectus. Vel sequi vitae voluptatem perspiciatis eligendi. Voluptatibus optio natus 
-                asperiores est commodi amet quia architecto. Dolores necessitatibus et.
+                a delectus.
                 </p>
             </div>
 
             <div class="col-block item-service" data-aos="fade-up">
-                <h4>Avoid Tounching Your Face</h4>
+                <h4>AVOID TOUCHING YOUR FACE</h4>
                 <p>
                 Sit ut cum molestiae. Dolore ducimus qui quasi. Fugiat consequatur sit vel illum vel et 
-                a delectus. Vel sequi vitae voluptatem perspiciatis eligendi. Voluptatibus optio natus 
-                asperiores est commodi amet quia architecto. Dolores necessitatibus et.
+                a delectus. 
                 </p>
             </div>
 
@@ -405,6 +449,9 @@ Most people infected with the COVID-19 virus will experience mild to moderate re
         
             <div id="chartContainer2" style="height: 400px; width: 90%;"></div>
             <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+
+
 
         <!-- <div class="portfolio block-1-4 block-m-1-3 block-tab-1-2 collapse">
             
@@ -635,7 +682,7 @@ Most people infected with the COVID-19 virus will experience mild to moderate re
        <!--  </div> --> <!-- end portfolio -->
 
 
-        <div class="testimonials-wrap" data-aos="fade-up">
+        <!-- <div class="testimonials-wrap" data-aos="fade-up">
 
             <div class="row">
                 <div class="col-full testimonials-header">
@@ -656,9 +703,9 @@ Most people infected with the COVID-19 virus will experience mild to moderate re
                             <span class="testimonials__name">Tim Cook</span>
                             <span class="testimonials__position">CEO, Apple</span>
                         </div>
-                    </div> <!-- end testimonials__slide -->
+                    </div> --> <!-- end testimonials__slide -->
 
-                    <div class="testimonials__slide">
+<!--                     <div class="testimonials__slide">
                         <span class="testimonials__icon"></span>
                         <p>Excepturi nam cupiditate culpa doloremque deleniti repellat. Veniam quos repellat voluptas animi adipisci.
                         Nisi eaque consequatur. Quasi voluptas eius distinctio. Atque eos maxime. Qui ipsam temporibus quisquam vel.</p>
@@ -667,9 +714,9 @@ Most people infected with the COVID-19 virus will experience mild to moderate re
                             <span class="testimonials__name">Sundar Pichai</span>
                             <span class="testimonials__position">CEO, Google</span>
                         </div>
-                    </div> <!-- end testimonials__slide -->
+                    </div> --> <!-- end testimonials__slide -->
 
-                    <div class="testimonials__slide">
+                   <!--  <div class="testimonials__slide">
                         <span class="testimonials__icon"></span>
                         <p>Repellat dignissimos libero. Qui sed at corrupti expedita voluptas odit. Nihil ea quia nesciunt. Ducimus aut sed ipsam.  
                         Autem eaque officia cum exercitationem sunt voluptatum accusamus. Quasi voluptas eius distinctio.</p>
@@ -678,13 +725,24 @@ Most people infected with the COVID-19 virus will experience mild to moderate re
                             <span class="testimonials__name">Satya Nadella</span>
                             <span class="testimonials__position">CEO, Microsoft</span>
                         </div>
-                    </div> <!-- end testimonials__slide -->
+                    </div> --> <!-- end testimonials__slide -->
                     
-                </div> <!-- end testimonials__slider -->
+               <!--  </div> --> <!-- end testimonials__slider -->
 
-            </div> <!-- end testimonials -->
+            <!-- </div> --> <!-- end testimonials -->
 
-        </div> <!-- end testimonials-wrap -->
+       <!--  </div> --> <!-- end testimonials-wrap -->
+<br>
+
+<div class="full-height">
+<iframe  id="iframe-app" src="https://www.bing.com/covid" width="100%" height="100%"></iframe>
+</div>
+
+
+
+
+
+
 
     </section> <!-- end s-works -->
 
@@ -697,19 +755,19 @@ Most people infected with the COVID-19 virus will experience mild to moderate re
         <div class="row stats-block block-1-4 block-m-1-2 block-mob-full" data-aos="fade-up">
                 
             <div class="col-block item-stats ">
-                <div class="item-stats__count">954K</div>
+                <div class="item-stats__count">1524375</div>
                 <h5>Total Confirmed cases</h5>
             </div>
             <div class="col-block item-stats">
-                <div class="item-stats__count">696</div>
+                <div class="item-stats__count">1102541</div>
                 <h5>Active Cases</h5>
             </div>
             <div class="col-block item-stats">
-                <div class="item-stats__count">194</div>
+                <div class="item-stats__count">332869</div>
                 <h5>Recovered Cases</h5>
             </div>
             <div class="col-block item-stats">
-                <div class="item-stats__count">48</div>
+                <div class="item-stats__count">88965</div>
                 <h5>Fatal Cases</h5> 
             </div>
 
@@ -722,17 +780,17 @@ Most people infected with the COVID-19 virus will experience mild to moderate re
     ================================================== -->
     <section id="contact" class="s-contact target-section">
 
-        <div class="row section-header" data-aos="fade-up">
+      <!--   <div class="row section-header" data-aos="fade-up">
             <div class="col-full">
                 <h3 data-num="05" class="subhead">Get In Touch</h3>
                 <h1 class="display-1 display-1--light">Scared you might have the virus?? Don't be! Contact us at <a href="tel:03820080800 ">038 200 80 800 </a>
                  </h1>
             </div>
         </div>
-
+ -->
         <div class="row contact-infos">
 
-           <!--  <div class="col-five md-seven tab-full contact-address" data-aos="fade-up">
+            <div class="col-five md-seven tab-full contact-address" data-aos="fade-up">
                 <h4>Where to Find Us</h4>
 
                 <p>
@@ -741,8 +799,8 @@ Most people infected with the COVID-19 virus will experience mild to moderate re
                 94043  US
                 </p>
             </div>
- -->
-           <!--  <div class="col-three md-five tab-full contact-social" data-aos="fade-up">
+
+        <!--     <div class="col-three md-five tab-full contact-social" data-aos="fade-up">
                 <h4>Follow Us</h4>
 
                 <ul class="contact-list">
@@ -750,8 +808,8 @@ Most people infected with the COVID-19 virus will experience mild to moderate re
                     <li><a href="#0">Twitter</a></li>
                     <li><a href="#0">Instagram</a></li>
                 </ul>
-            </div> -->
-
+            </div>
+ -->
             <div class="col-four md-six tab-full contact-number" data-aos="fade-up">
                 <h4>Contact Us</h4>
 

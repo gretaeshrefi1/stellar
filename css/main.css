@@ -75,7 +75,7 @@ body {
 body {
   background: #151515;
   font-family: "Merriweather", serif;
-  font-size: 1.7rem;
+  font-size: 2.5rem;
   font-style: normal;
   font-weight: normal;
   line-height: 1.941;
@@ -88,7 +88,7 @@ body {
  * ## links
  * ------------------------------------------------------------------- */
 a {
-  color: #F26522;
+  color: #339AF0;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
@@ -1474,6 +1474,7 @@ input::-moz-focus-inner {
   padding: 0 8rem 0 4rem;
   overflow: hidden;
   z-index: 1;
+  border-radius: 30px;
 }
 
 .btn-animatedbg::before {
@@ -1645,7 +1646,7 @@ input::-moz-focus-inner {
 .s-header.sticky {
   position: fixed;
   top: 0;
-  background-color: #000000 !important;
+  background-color: #1A3046 !important;
   opacity: 0;
   visibility: hidden;
   z-index: 600;
@@ -1812,7 +1813,7 @@ input::-moz-focus-inner {
 .header-nav-wrap {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
-  font-size: 11px;
+  font-size: 13px;
   text-transform: uppercase;
   letter-spacing: .3rem;
   position: absolute;
@@ -1842,6 +1843,9 @@ input::-moz-focus-inner {
 .header-nav li.current a,
 .header-nav li a:hover {
   color: #FFFFFF;
+  font-size: 1.5rem;
+/*  background-color: #606467;
+  border-radius: 50px;*/
 }
 
 /* ------------------------------------------------------------------- 
@@ -2171,12 +2175,17 @@ input::-moz-focus-inner {
   line-height: 36px;
   right: 0;
 }
+.home-social i:hover{
+  background-color: #ddd;
+  border-radius: 10px;
+  color: black;
+}
 
 .home-social span {
   background-color: #151515;
   font-size: 1.2rem;
   line-height: 30px;
-  color: #339AF0;
+  color: #black;
   right: 50px;
   padding: 0 15px;
   margin: 3px 0;
@@ -2510,8 +2519,8 @@ html.no-csstransitions .home-content__main {
  *
  * ------------------------------------------------------------------- */
 .s-about {
-  padding-top: 18rem;
-  padding-bottom: 18rem;
+  padding-top: 8rem;
+  padding-bottom: 13rem;
   background-color: #FFFFFF;
   position: relative;
 }
@@ -2652,8 +2661,8 @@ html.no-csstransitions .home-content__main {
  *
  * ------------------------------------------------------------------- */
 .s-services {
-  padding-top: 18rem;
-  padding-bottom: 18rem;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
   background-color: #151515;
   background-repeat: no-repeat;
   background-position: center center;
@@ -2745,8 +2754,8 @@ html.no-csstransitions .home-content__main {
  *
  * ------------------------------------------------------------------- */
 .s-works {
-  padding-top: 18rem;
-  padding-bottom: 18rem;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
   background-color: #FFFFFF;
   position: relative;
 }
@@ -3172,8 +3181,8 @@ html.no-csstransitions .home-content__main {
  *
  * ------------------------------------------------------------------- */
 .s-clients {
-  padding-top: 18rem;
-  padding-bottom: 18rem;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
   background-color: #2a2a2a;
   position: relative;
 }
@@ -3336,7 +3345,7 @@ html.no-csstransitions .home-content__main {
 .item-stats__count {
   font-family: "Montserrat", sans-serif;
 /*  font-weight: 600;*/
-  font-size: 7rem;
+  font-size: 6rem;
   line-height: 1;
   color: #FFFFFF;
   margin-bottom: 1.5rem;
@@ -3347,7 +3356,7 @@ html.no-csstransitions .home-content__main {
   line-height: 1.714;
   text-transform: uppercase;
   letter-spacing: .25rem;
-  color: rgba(255, 255, 255, 0.25);
+  color: rgba(255, 255, 255, 0.5);
   margin-top: 0;
 }
 
@@ -3396,8 +3405,8 @@ html.no-csstransitions .home-content__main {
  *
  * ------------------------------------------------------------------- */
 .s-contact {
-  padding-top: 18rem;
-  padding-bottom: 12rem;
+/*  padding-top: 3rem;
+  padding-bottom: 3rem;*/
   background-color: #151515;
   position: relative;
 }
@@ -3441,10 +3450,10 @@ html.no-csstransitions .home-content__main {
   line-height: 1.714;
   color: white;
 }
-
+/*
 .contact-infos [class*="contact-"] {
   padding-bottom: 3rem;
-}
+}*/
 
 .contact-list {
   list-style: none;
@@ -3453,6 +3462,10 @@ html.no-csstransitions .home-content__main {
 
 .contact-list a {
   color: #FFFFFF;
+}
+.contact-list a:hover{
+  font-size: 3.2rem;
+  color: #339AF0;
 }
 
 .contact-list li {
@@ -3650,7 +3663,7 @@ footer {
   font-family: "Montserrat", sans-serif;
   font-weight: normal;
   padding-top: 0;
-  padding-bottom: 6rem;
+  padding-bottom: 1rem;
   border-top: 1px solid rgba(255, 255, 255, 0.03);
   color: rgba(255, 255, 255, 0.3);
   position: relative;
@@ -3815,4 +3828,13 @@ footer a:visited {
   padding-left: 50px;
 }
 
+#chartContainer3{
+  padding-top: 90px;
+}
+
+.full-height{
+    height:800px !important;
+}#iframe-app{
+    border:none;
+}
 /*# sourceMappingURL=main.css.map */
